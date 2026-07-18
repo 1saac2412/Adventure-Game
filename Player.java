@@ -1,6 +1,6 @@
 public class Player extends Entity
 {
-    private float level;
+    private double level;
     private int coints;
 
 
@@ -13,7 +13,7 @@ public class Player extends Entity
 
 
     // Getters
-    public float getLevel()
+    public double getLevel()
     {
         return this.level;
     }
@@ -23,7 +23,7 @@ public class Player extends Entity
     }
 
     // Setters
-    public void setLevel(float level)
+    public void setLevel(double level)
     {
         this.level = level;
     }

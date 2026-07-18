@@ -32,14 +32,18 @@ public class main
         Game game = new Game();
         Player player = new Player();
 
+        
+        // GAME INTRO
+        System.out.print("Name: ");
+        player.setName(scanner.nextLine());
+        player.setAttackPower(6);
+
+
+        System.out.println("Hello, " + player.getName() + "! Your adventure begins now.....");
+
         // Run Game
         while (player.getHealth() > 0)
-        {   
-            // GAME LOGIC
-            System.out.print("Name: ");
-            player.setName(scanner.nextLine());
-            System.out.println("Hello, " + player.getName() + "! Your adventure begins now.....");
-
+        {
             //First Battle
             System.out.println("An enemy appears! Prepare for battle!");
 

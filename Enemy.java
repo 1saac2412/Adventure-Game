@@ -5,7 +5,7 @@ public class Enemy extends Entity
         super();
     }
 
-    public Enemy(String name, float health, float attackPower)
+    public Enemy(String name, double health, double attackPower)
     {
         super(name, health, attackPower);
     }

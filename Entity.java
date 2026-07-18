@@ -1,17 +1,17 @@
 public class Entity
 {
     private String name;
-    private float attackPower;
-    private float health;
+    private double attackPower;
+    private double health;
 
     public Entity()
     {
         this.name = "Entity";
-        this.health = 100.0f;
-        this.attackPower = 0.1f;
+        this.health = 100.0;
+        this.attackPower = 5;
     }
 
-    public Entity(String name, float health, float attackPower)
+    public Entity(String name, double health, double attackPower)
     {
         this.name = name;
         this.health = health;
@@ -24,11 +24,11 @@ public class Entity
         return this.name;
     }
 
-    public float getHealth()
+    public double getHealth()
     {
         return this.health;
     }
-    public float getAttackPower()
+    public double getAttackPower()
     {
         return this.attackPower;
     }
@@ -39,17 +39,17 @@ public class Entity
     {
         this.name = name;
     }
-    public void setHealth(float health)
+    public void setHealth(double health)
     {
         this.health = health;
     }
-    public void setAttackPower(float attackPower)
+    public void setAttackPower(double attackPower)
     {
         this.attackPower = attackPower;
     }
 
     public void attack(Entity entity)
     {
-        entity.setHealth(entity.getHealth() - this.attackPower);
+        entity.setHealth(Math.round(entity.getHealth() - (this.attackPower + Math.random()*10)) );
     }
 }
