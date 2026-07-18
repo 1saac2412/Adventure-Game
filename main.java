@@ -5,28 +5,26 @@ public class main
     public static void main(String[] args)
     {
         // Welcome Message
-        System.out.println("Welcome to the Adventure Game!\n (Press 'Enter' to Continue, or type 'Quit' to exit the game)");
+        System.out.println("Welcome to the Adventure Game!\n (Type 'Start' to Continue, or type 'Quit' to exit the game)");
 
         // Scanner for user input
         Scanner scanner = new Scanner(System.in);        
         String response = scanner.nextLine();
-
      
-        while (!response.equalsIgnoreCase("quit") || !response.equalsIgnoreCase("enter"))
-        {  
-            System.out.println("Incorrect Response. To play: 'Enter' To exit: 'quit'");
-            response = scanner.nextLine();
-
+        while (!response.equalsIgnoreCase("quit") || !response.equalsIgnoreCase("start"))
+        { 
             if (response.equalsIgnoreCase("quit"))
             {
                 System.out.println("Goodbye!");
                 System.exit(0);
             }
-            else if (response.equalsIgnoreCase("enter"))
+            else if (response.equalsIgnoreCase("start"))
             {
                 // Continue to Game
                 break;
             }
+            System.out.println("Incorrect Response. To play: 'start' To exit: 'quit'");
+            response = scanner.nextLine();
         }
         
         
